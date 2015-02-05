@@ -15,12 +15,15 @@ RUN sed -i 's/docker-php-\(ext-$ext.ini\)/\1/' /usr/local/bin/docker-php-ext-ins
 RUN apt-get update && apt-get install -y libjpeg62-turbo libpng12-0 --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN buildDeps=" \
 		libjpeg-dev \
+		libldap2-dev \
 		libpng12-dev \
 	"; \
 	set -x \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/* \
 	&& docker-php-ext-configure gd --with-jpeg-dir=/usr/lib/x86_64-linux-gnu \
 	&& docker-php-ext-install gd \
+	&& docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
+	&& docker-php-ext-install ldap \
 	&& docker-php-ext-install mbstring \
 	&& docker-php-ext-install mysql \
 	&& docker-php-ext-install mysqli \
