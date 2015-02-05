@@ -3,8 +3,8 @@ FROM tommylau/lnmpa:apache
 MAINTAINER Tommy Lau <tommy@gen-new.com>
 
 # Setup the Xdebug version to install
-ENV XDEBUG_VERSION 2.2.6
-ENV XDEBUG_MD5 f216356861e27284580d0208060ea7fa
+ENV XDEBUG_VERSION 2.2.7
+ENV XDEBUG_MD5 71a6b75885207e79762e1e7aaf5c3993
 
 # Install Xdebug
 RUN set -x \
