@@ -1,4 +1,4 @@
-FROM tommylau/lnmpa:apache
+FROM tommylau/apache
 
 MAINTAINER Tommy Lau <tommy@gen-new.com>
 
