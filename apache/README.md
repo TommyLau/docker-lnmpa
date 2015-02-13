@@ -65,7 +65,7 @@ docker run --name apache -v /path/to/web:/var/www/html -p 80:80 -e BOOT2DOCKER=1
 To use this image linking with MySQL, you have to have a running MySQL instance, more information about MySQL docker image, please refer to [tommylau/mysql](https://registry.hub.docker.com/u/tommylau/mysql/). Suppose you have a MySQL instance named **mysql5.6_server**, we can link it in our Apache2 instance with the name **mysql** like this:
 
 ```bash
-docker run --name apache -v /path/to/web:/var/www/html --link mysql5.6_server:mysql -p 80:80 -e -d tommylau/apache
+docker run --name apache -v /path/to/web:/var/www/html --link mysql5.6_server:mysql -p 80:80 -d tommylau/apache
 ```
 
 Then in the instance, you can use the hostname `mysql` to connect to the database.
