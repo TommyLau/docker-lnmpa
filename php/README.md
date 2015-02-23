@@ -28,7 +28,7 @@ Framework support:
 
 Other:
 
-- Switch system and php timezone to **Asia/Shanghai**, which is CST(China Standard Time)
+- Set php timezone to **Etc/UTC**
 
 TODO:
 
