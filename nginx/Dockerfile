@@ -2,9 +2,6 @@ FROM nginx
 
 MAINTAINER Tommy Lau <tommy@gen-new.com>
 
-# Setup system timezone
-RUN echo "Asia/Shanghai" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
-
 # Copy the vhost and other files to conf.d
 COPY conf.d/* /etc/nginx/conf.d/
 
