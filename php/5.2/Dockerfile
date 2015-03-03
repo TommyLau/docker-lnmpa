@@ -79,7 +79,7 @@ COPY php-fpm.conf /usr/local/etc/php/
 RUN cat /usr/src/php/php.ini-recommended | sed 's/^;\(date.timezone.*\)/\1 \"Etc\/UTC\"/' > /usr/local/etc/php/php.ini \
 	&& sed -i 's/\(extension_dir = \)\"\.\/\"/\1\"\/usr\/local\/lib\/php\/extensions\/no-debug-non-zts-20060613\/\"/' /usr/local/etc/php/php.ini
 
-WORKDIR /var/www/html
+WORKDIR /var/www
 
 # Run php-fpm
 EXPOSE 9000
