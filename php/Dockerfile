@@ -1,4 +1,4 @@
-FROM php:fpm
+FROM php:5.6-fpm
 
 MAINTAINER Tommy Lau <tommy@gen-new.com>
 
