@@ -1,4 +1,4 @@
-FROM tommyLau/php:apache
+FROM tommylau/php:apache
 
 MAINTAINER Tommy Lau <tommy@gen-new.com>
 
